@@ -1,8 +1,11 @@
-function openPopup(project) {
+import { setupProfilePopup } from './_shared.js';
+setupProfilePopup();
+
+window.openPopup = function (project) {
   if (project === 'asri') document.getElementById('popupAsri').style.display = 'flex';
   if (project === 'badrul') document.getElementById('popupBadrul').style.display = 'flex';
-}
+};
 
-function closePopup(id) {
+window.closePopup = function (id) {
   document.getElementById(id).style.display = 'none';
-}
+};
