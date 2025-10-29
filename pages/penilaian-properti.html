@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Layout</title>
+<link rel="stylesheet" href="../styles/penilaian-properti.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">Properti</a>
+      <a href="#">Laporan</a>
+      <a href="#">Obrolan</a>
+      <a href="#">Setting</a>
+    </div>
+    <div class="profile-pic">
+      <img src="profile.jpeg" alt="Profile">
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="menu">
+      <div class="menu-card"><div class="menu-icon">📄</div><div class="menu-text"><h3>Dokumen</h3><span>Properti</span></div></div>
+      <div class="menu-card"><div class="menu-icon">🧱</div><div class="menu-text"><h3>Fisik</h3><span>Properti</span></div></div>
+      <div class="menu-card"><div class="menu-icon">🧾</div><div class="menu-text"><h3>Penilaian</h3><span>Properti</span></div></div>
+    </div>
+
+    <div class="list-container">
+      <div class="list-header">Penilaian</div>
+        <div class="list-content">
+          <div class="list-item" onclick="openPopup('asri')"><input type="checkbox" checked><div class="name">Asri</div><div class="project">Project Asri</div><div class="time">10.30</div></div>
+          <div class="list-item" onclick="openPopup('badrul')"><input type="checkbox"><div class="name">Badrul</div><div class="project">Project Badrul</div><div class="time">11.30</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Cahyo</div><div class="project">Project Cahyo</div><div class="time">12.00</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Dewi</div><div class="project">Project Dewi</div><div class="time">12.15</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Eka</div><div class="project">Project Eka</div><div class="time">12.30</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Fajar</div><div class="project">Project Fajar</div><div class="time">12.45</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Galuh</div><div class="project">Project Galuh</div><div class="time">13.00</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Hadi</div><div class="project">Project Hadi</div><div class="time">13.15</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Indra</div><div class="project">Project Indra</div><div class="time">13.30</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Joko</div><div class="project">Project Joko</div><div class="time">13.45</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Kartika</div><div class="project">Project Kartika</div><div class="time">14.00</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Lestari</div><div class="project">Project Lestari</div><div class="time">14.15</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Mulyadi</div><div class="project">Project Mulyadi</div><div class="time">14.30</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Nina</div><div class="project">Project Nina</div><div class="time">14.45</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Oki</div><div class="project">Project Oki</div><div class="time">15.00</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Putri</div><div class="project">Project Putri</div><div class="time">15.15</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Qori</div><div class="project">Project Qori</div><div class="time">15.30</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Rizki</div><div class="project">Project Rizki</div><div class="time">15.45</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Sari</div><div class="project">Project Sari</div><div class="time">16.00</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Teguh</div><div class="project">Project Teguh</div><div class="time">16.15</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Umar</div><div class="project">Project Umar</div><div class="time">16.30</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Vina</div><div class="project">Project Vina</div><div class="time">16.45</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Wahyu</div><div class="project">Project Wahyu</div><div class="time">17.00</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Yuni</div><div class="project">Project Yuni</div><div class="time">17.15</div></div>
+          <div class="list-item"><input type="checkbox"><div class="name">Zidan</div><div class="project">Project Zidan</div><div class="time">17.30</div></div>
+        </div>
+      <button class="verify-btn">Verifikasi</button>
+    </div>
+  </div>
+
+  <!-- POPUPS -->
+  <div class="overlay" id="popupAsri">
+    <div class="popup">
+      <div class="popup-header">
+        <span>Project Asri</span>
+        <button onclick="closePopup('popupAsri')">✕</button>
+      </div>
+      <div class="popup-content">
+        <div class="form-group"><label>Nilai Tanah</label><input type="text" value="100.000.000" readonly></div>
+        <div class="form-group"><label>Nilai Bangunan</label><input type="text" value="200.000.000" readonly></div>
+        <div class="form-group"><label>Nilai Lain</label><input type="text" value="50.000.000" readonly></div>
+        <div class="form-group"><label>Nilai Properti</label><input type="text" value="350.000.000" readonly></div>
+        <div class="form-group"><label>Nilai Akhir</label><input type="text" value="350.000.000" readonly></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="popupBadrul">
+    <div class="popup">
+      <div class="popup-header">
+        <span>Project Badrul</span>
+        <button onclick="closePopup('popupBadrul')">✕</button>
+      </div>
+      <div class="popup-content">
+        <div class="form-group"><label>Nilai Tanah</label><input type="text"></div>
+        <div class="form-group"><label>Nilai Bangunan</label><input type="text"></div>
+        <div class="form-group"><label>Nilai Lain</label><input type="text"></div>
+        <div class="form-group"><label>Nilai Properti</label><input type="text"></div>
+        <div class="form-group"><label>Nilai Akhir</label><input type="text"></div>
+        <div class="popup-footer"><button>Kirim</button></div>
+      </div>
+    </div>
+  </div>
+
+<script src="../scripts/penilaian-properti.js"></script>
+</body>
+</html>
