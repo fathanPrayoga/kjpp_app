@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Dashboard</title>
+  <link rel="stylesheet" href="../style/laporan.css">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/logo.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Properti</a></li>
+      <li><a href="../pages/dashboard_laporan.html" class="active">Laporan</a></li>
+      <li><a href="#">Obrolan</a></li>
+      <li><a href="#">Setting</a></li>
+    </ul>
+    <div class="profile">
+      <img src="../assets/profile.png" alt="Foto Profil">
+    </div>
+  </nav>
+
+  <!-- Konten Utama -->
+  <main class="main-content">
+    <h1>Laporan</h1>
+    <div class="laporan-container">
+
+      <!-- Menu Kiri -->
+      <div class="laporan-menu">
+
+        <!-- Card Project -->
+        <div class="laporan-card" onclick="window.location.href='laporan_project.html'">
+          <div class="icon-box">
+            <img src="../assets/box.png" alt="">
+          </div>
+          <div class="laporan-text">
+            <h3>Project</h3>
+            <p>Laporan</p>
+          </div>
+        </div>
+
+        <!-- Card Tahunan (Active) -->
+        <div class="laporan-card active" onclick="window.location.href='laporan_tahunan.html'">
+          <div class="calendar-days">
+            <img src="../assets/calendar-days.png" alt="">
+          </div>
+          <div class="laporan-text">
+            <h3>Tahunan</h3>
+            <p>Laporan</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Area kanan -->
+      <div class="laporan-display">
+        <h3>Laporan Anda</h3>
+        <div class="laporan-box" id="laporanBox">
+          <p class="placeholder">Laporan belum ada</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../scripts/laporan.js"></script>
+</body>
+
+</html>

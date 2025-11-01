@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Tahunan</title>
+  <link rel="stylesheet" href="../style/laporan.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/logo.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Properti</a></li>
+      <li><a href="../pages/dashboard_laporan.html" class="active">Laporan</a></li>
+      <li><a href="#">Obrolan</a></li>
+      <li><a href="#">Setting</a></li>
+    </ul>
+    <div class="profile">
+      <img src="../assets/profile.png" alt="Foto Profil">
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <h1>Laporan Tahunan</h1>
+
+    <div class="laporan-container">
+
+      <!-- Menu Kiri -->
+      <div class="laporan-menu">
+        <div class="laporan-card" onclick="window.location.href='laporan_project.html'">
+          <div class="icon-box">
+            <img src="../assets/box.png" alt="">
+          </div>
+          <div class="laporan-text">
+            <h3>Project</h3>
+            <p>Laporan</p>
+          </div>
+        </div>
+
+        <div class="laporan-card active">
+          <div class="calendar-days">
+            <img src="../assets/calendar-days.png" alt="">
+          </div>
+          <div class="laporan-text">
+            <h3>Tahunan</h3>
+            <p>Laporan</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- List Laporan Tahunan -->
+      <div class="laporan-display">
+        <h3>List Laporan Tahunan</h3>
+
+        <div class="project-list">
+          <div class="project-item" onclick="openTahunanModal('2020')">Laporan 2020</div>
+          <div class="project-item" onclick="openTahunanModal('2019')">Laporan 2019</div>
+          <div class="project-item" onclick="openTahunanModal('2018')">Laporan 2018</div>
+          <div class="project-item" onclick="openTahunanModal('2017')">Laporan 2017</div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL DETAIL LAPORAN TAHUNAN -->
+  <div class="modal" id="tahunanModal">
+    <div class="modal-content modal-tahunan-box">
+
+      <div class="modal-tahunan-header">
+        <span id="modalTahunTitle">Laporan 2020</span>
+        <span class="close-btn" id="closeTahunanModal">&times;</span>
+      </div>
+
+      <div id="tahunanFileList" class="file-list">
+        <!-- Akan diisi via JS -->
+      </div>
+
+      <button class="download-all-btn" id="downloadAllBtn">Unduh semua</button>
+
+    </div>
+  </div>
+
+  <script src="../scripts/laporan_tahunan.js"></script>
+</body>
+
+</html>
