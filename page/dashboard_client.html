@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,21 @@
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <header class="navbar">
         <div class="logo-container">
-           <img src="/css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
+            <img src="/css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
         </div>
         <nav class="nav-links">
-            <a href="verifikasi_properti.html">Properti</a>
+            <div class="dropdown">
+                <a href="verifikasi_properti.html">Properti</a>
+                <div class="dropdown-content">
+                    <a href="verifikasi_properti.html">Properti</a>
+                    <a href="kirim_dokumen.html">Kirim Dokumen</a>
+                </div>
+            </div>
             <a href="#">Laporan</a>
             <a href="#">Obrolan</a>
             <a href="#">Setting</a>
@@ -31,16 +39,16 @@
 
         <div class="main-layout">
             <div class="left-column">
-                
+
                 <section class="info-cards">
                     <a href="verifikasi_properti.html" class="card-link">
-                    <div class="card card-dashboard">
-                        <div class="card-icon property-icon big-icon"><i class="fas fa-search fa-2x"></i></div>
-                        <div class="card-content text-center">
-                            <h3>Properti</h3>
-                            <p>Dokumen Terverifikasi</p>
+                        <div class="card card-dashboard">
+                            <div class="card-icon property-icon big-icon"><i class="fas fa-search fa-2x"></i></div>
+                            <div class="card-content text-center">
+                                <h3>Properti</h3>
+                                <p>Dokumen Terverifikasi</p>
+                            </div>
                         </div>
-                    </div>
                     </a>
                     <div class="card card-dashboard">
                         <div class="card-icon report-icon big-icon"><i class="fas fa-hard-hat fa-2x"></i></div>
@@ -57,7 +65,7 @@
                         </div>
                     </div>
                 </section>
-                
+
                 <section class="status-section">
                     <h2>Status</h2>
                     <table>
@@ -103,4 +111,5 @@
     </main>
 
 </body>
+
 </html>

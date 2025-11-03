@@ -1,0 +1,120 @@
+:root {
+    --primary-green: #52a352;       
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #fff;
+    --border-color: #ddd;
+    --background-grey: #f0f0f0;     
+    --card-bg: #fff;
+    --light-green: #e9f7e9;         
+    --status-complete: #8ec38e;     
+    --active-blue: #90caf9;         
+    --light-green-bg: #e8f5e8;      
+    --badge-green: #8ec38e;         
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-grey);
+    color: var(--text-dark);
+}
+
+.content-container {
+    padding: 30px 40px;
+    padding-top: 120px;
+}
+
+.content-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-container h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.dokumen-container {
+    background-color: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+}
+
+.info-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    flex: 1;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="date"] {
+    flex: 2.5;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px; 
+    font-size: 14px;
+}
+
+hr {
+    display: none;
+}
+
+.upload-section {
+    margin-bottom: 2px;
+}
+
+.upload-section h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 2px;
+}
+
+.upload-label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: lighter;
+}
+
+.upload-box {
+    position: flex; 
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.btn-kirim {
+    margin-top: 20px;
+    background-color: var(--primary-green);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    width: 15%;
+    margin-left: 85%;
+}
+
+.btn-kirim:hover {
+    background-color: #449544;
+}

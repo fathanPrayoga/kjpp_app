@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Dokumen</title>
+    <link rel="stylesheet" href="/css/kirim_dokumen.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="/css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
+        </div>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a href="#" class="active">Properti</a>
+                <div class="dropdown-content">
+                    <a href="verifikasi_properti.html">Properti</a>
+                    <a href="kirim_dokumen.html">Kirim Dokumen</a>
+                </div>
+            </div>
+            <a href="#">Laporan</a>
+            <a href="#">Obrolan</a>
+            <a href="#">Setting</a>
+        </nav>
+        <div class="user-profile">
+            <img src="/css/mbak yui.jpg" alt="Foto Profil" class="profile-pic">
+        </div>
+    </header>
+
+    <main class="content-container">
+        <h1>Kirim Dokumen</h1>
+        <h2>ⓘ Informasi Dokumen</h2>
+
+        <div class="dokumen-container">
+            <form class="info-form" onsubmit="alert('Dokumen Berhasil Dikirim');" action="verifikasi_properti.html">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contract-date">Contract Date</label>
+                    <input type="date" id="contract-date" name="contract-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <input type="text" id="industry" name="industry" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-person">Contact Person</label>
+                    <input type="text" id="contact-person" name="contact-person" required>
+                </div>
+                <hr>
+                <div class="upload-section">
+                    <h2><i class="fa-solid fa-paperclip"></i> Attach File</h2>
+                    <label class="upload-label">Upload Dokumen Sertifikat Tanah</label>
+                    <div class="upload-box">
+                        <input type="file" id="file-sertifikat" name="file-sertifikat" accept=".pdf" required>
+                    </div>
+                </div>
+                <div class="upload-section">
+                    <h2><i class="fa-solid fa-paperclip"></i> Attach File</h2>
+                    <label class="upload-label">Upload Dokumen Izin Mendirikan Bangunan</label>
+                    <div class="upload-box">
+                        <input type="file" id="file-izin" name="file-izin" accept=".pdf" required>
+                    </div>
+                </div>
+                <div class="upload-section">
+                    <h2><i class="fa-solid fa-paperclip"></i> Attach File</h2>
+                    <label class="upload-label">Upload Dokumen Pajak Bumi Bangunan</label>
+                    <div class="upload-box">
+                        <input type="file" id="file-pbb" name="file-pbb" accept=".pdf" required>
+                    </div>
+                </div>
+                <div class="upload-section">
+                    <h2><i class="fa-solid fa-paperclip"></i> Attach File</h2>
+                    <label class="upload-label">Upload Dokumen Rencana Anggaran Biaya</label>
+                    <div class="upload-box">
+                        <input type="file" id="file-rab" name="file-rab" accept=".pdf" required>
+                    </div>
+                </div>
+                <div class="upload-section">
+                    <h2><i class="fa-solid fa-paperclip"></i> Attach File</h2>
+                    <label class="upload-label">Upload Dokumen Denah Bangunan</label>
+                    <div class="upload-box">
+                        <input type="file" id="file-denah" name="file-denah" accept=".pdf" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-kirim">Kirim</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
