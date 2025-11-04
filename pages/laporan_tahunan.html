@@ -6,25 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laporan Tahunan</title>
   <link rel="stylesheet" href="../style/laporan.css">
+  <link rel="stylesheet" href="../style/navbar.css">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="../assets/logo.png" alt="Logo">
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="../assets/logo.png" alt="Logo Perusahaan" class="navbar-logo">
     </div>
-    <ul class="nav-links">
-      <li><a href="#">Properti</a></li>
-      <li><a href="../pages/dashboard_laporan.html" class="active">Laporan</a></li>
-      <li><a href="#">Obrolan</a></li>
-      <li><a href="#">Setting</a></li>
-    </ul>
-    <div class="profile">
-      <img src="../assets/profile.png" alt="Foto Profil">
+    <nav class="nav-links">
+      <a href="#">Properti</a>
+      <a href="../pages/dashboard_laporan.html">Laporan</a>
+      <a href="#">Obrolan</a>
+      <a href="#">Setting</a>
+    </nav>
+    <div class="user-profile">
+      <img src="../assets/mbak yui.jpg" alt="Foto Profil" class="profile-pic">
     </div>
-  </nav>
+  </header>
 
   <!-- MAIN -->
   <main class="main-content">
@@ -72,7 +73,7 @@
   </main>
 
   <!-- MODAL DETAIL LAPORAN TAHUNAN -->
-  <div class="modal" id="tahunanModal">
+  <div class="modal" id="tahunanModal" aria-hidden="true">
     <div class="modal-content modal-tahunan-box">
 
       <div class="modal-tahunan-header">
@@ -80,8 +81,7 @@
         <span class="close-btn" id="closeTahunanModal">&times;</span>
       </div>
 
-      <div id="tahunanFileList" class="file-list">
-        <!-- Akan diisi via JS -->
+        <div id="tahunanFileList" class="file-list">
       </div>
 
       <button class="download-all-btn" id="downloadAllBtn">Unduh semua</button>
