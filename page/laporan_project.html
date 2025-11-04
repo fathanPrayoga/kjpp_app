@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Project</title>
+  <link rel="stylesheet" href="../css/laporan.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="../css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#">Properti</a>
+      <a href="../pages/dashboard_laporan_karyawan.html">Laporan</a>
+      <a href="#">Obrolan</a>
+      <a href="#">Setting</a>
+    </nav>
+    <div class="user-profile">
+      <img src="../css/mbak yui.jpg" alt="Foto Profil" class="profile-pic">
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="main-content">
+    <h1>Laporan Project</h1>
+
+    <div class="laporan-container">
+
+      <!-- Menu Kiri -->
+      <div class="laporan-menu">
+
+        <!-- Card Project -->
+        <div class="laporan-card" onclick="window.location.href='laporan_project.html'">
+          <div class="icon-box">
+            <img src="../css/box.png" alt="">
+          </div>
+          <div class="laporan-text">
+            <h3>Project</h3>
+            <p>Laporan</p>
+          </div>
+        </div>
+
+        <!-- Card Tahunan (Active) -->
+        <div class="laporan-card active" onclick="window.location.href='laporan_tahunan.html'">
+          <div class="calendar-days">
+            <img src="../css/calendar-days.png" alt="">
+          </div>
+          <div class="laporan-text">
+            <h3>Tahunan</h3>
+            <p>Laporan</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- AREA LIST PROJECT -->
+      <div class="laporan-display">
+        <h3>List Project</h3>
+
+        <div class="project-list">
+
+          <div class="project-item" onclick="openModal('Project Beduul')">
+            <img src="../css/box.png">
+            <span>Project Bedul</span>
+          </div>
+
+          <div class="project-item" onclick="openModal('Project Asri')">
+            <img src="../css/box.png">
+            <span>Project Asri</span>
+          </div>
+
+          <div class="project-item" onclick="openModal('Project Bedu2')">
+            <img src="../css/box.png">
+            <span>Project Bedu2</span>
+          </div>
+
+          <div class="project-item" onclick="openModal('Project Fahmi')">
+            <img src="../css/box.png">
+            <span>Project Fahmi</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL POPUP -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <span id="modalTitle">Laporan Project</span>
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+      </div>
+
+      <label>Nama Project</label>
+      <input type="text" id="namaProject" placeholder="Contoh: Project Asri">
+
+      <label>Asal Instansi</label>
+      <input type="text" id="asalInstansi" placeholder="Contoh: Mandiri">
+
+      <label>Tanggal Mulai</label>
+      <input type="date" id="tanggalMulai">
+
+      <label>Dokumen (.pdf)</label>
+      <input type="file" accept="application/pdf">
+
+      <button class="submit-btn">Unggah</button>
+    </div>
+  </div>
+
+  <script src="../scripts/laporan_project.js"></script>
+</body>
+
+</html>

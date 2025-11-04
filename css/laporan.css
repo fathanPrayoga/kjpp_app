@@ -1,0 +1,637 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #222;
+}
+
+/*  Layout Utama  */
+.main-content {
+  width: 100%;
+  padding: 120px 80px 40px 80px;
+}
+
+.main-content h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.laporan-container {
+  display: flex;
+  gap: 40px;
+}
+
+/*  Menu Kiri  */
+.laporan-menu {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.laporan-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.laporan-card:hover {
+  transform: translateY(-3px);
+}
+
+/* icon box */
+.icon-box,
+.calendar-days {
+  width: 52px;
+  height: 52px;
+  background: #78C57A;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.laporan-text h3 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.laporan-text p {
+  font-size: 12px;
+  color: #777;
+}
+
+/*  Area Kanan  */
+.laporan-display {
+  width: 70%;
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.laporan-display h3 {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.laporan-box {
+  width: 100%;
+  height: 260px;
+  border: 2px dashed #d0d0d0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  color: #bfbfbf;
+  font-size: 13px;
+}
+
+/*  MENU KIRI  */
+.laporan-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 240px;
+}
+
+/*  KARTU LAPORAN  */
+.laporan-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.laporan-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* IKON KARTU */
+.icon-box,
+.calendar-days {
+  width: 60px;
+  height: 60px;
+  background-color: #7BC77E;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.icon-box img,
+.calendar-days img {
+  width: 30px;
+  height: 30px;
+}
+
+/* TEKS KARTU */
+.laporan-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.laporan-card p {
+  font-size: 14px;
+  color: gray;
+  margin-top: 3px;
+}
+
+/*  AREA LIST PROJECT  */
+.laporan-display {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.laporan-display h3 {
+  margin-bottom: 15px;
+}
+
+.project-list {
+  background: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item img {
+  width: 28px;
+  margin-right: 12px;
+}
+
+.project-item:hover {
+  background-color: #f5f5f5;
+  transform: translateX(3px);
+}
+
+/*  MODAL / POPUP  */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  width: 600px;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-header {
+  background: #7BC77E;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1b1b1b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* FORM */
+.modal-content label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.submit-btn {
+  background: #7BC77E;
+  border: none;
+  padding: 11px;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #65ad69;
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIF */
+@media (max-width: 900px) {
+  .laporan-container {
+    flex-direction: column;
+  }
+
+  .laporan-menu {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+/*  MODAL LAPORAN TAHUNAN  */
+.modal-tahunan-box {
+  width: 650px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal-tahunan-header {
+  background: #7BC77E;
+  color: #000;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-list {
+  padding: 20px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 6px;
+  border-bottom: 1px solid #e5e5e5;
+  gap: 14px;
+}
+
+.file-item img {
+  width: 26px;
+}
+
+.file-item span {
+  flex: 1;
+  font-size: 14px;
+}
+
+.file-download-btn {
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.file-download-btn:hover {
+  opacity: 1;
+}
+
+.download-all-btn {
+  margin: 12px 20px 20px auto;
+  display: block;
+  padding: 7px 16px;
+  background: #7BC77E;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #222;
+}
+
+/*  Layout Utama  */
+.main-content {
+  width: 100%;
+  padding: 120px 80px 40px 80px;
+}
+
+.main-content h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.laporan-container {
+  display: flex;
+  gap: 40px;
+}
+
+/*  Menu Kiri  */
+.laporan-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 240px;
+}
+
+/*  Kartu Laporan  */
+.laporan-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.laporan-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Ikon Kartu */
+.icon-box,
+.calendar-days {
+  width: 60px;
+  height: 60px;
+  background-color: #7BC77E;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.icon-box img,
+.calendar-days img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Teks Kartu */
+.laporan-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.laporan-card p {
+  font-size: 14px;
+  color: gray;
+  margin-top: 3px;
+}
+
+/*  Area List Laporan Tahunan  */
+.laporan-display {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+}
+
+.laporan-display h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.project-list {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item:hover {
+  background-color: #f5f5f5;
+  transform: translateX(2px);
+}
+
+/*  MODAL / POPUP TAHUNAN */
+.modal {
+  display: none;
+  /* Default: Sembunyikan modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Background overlay gelap */
+
+  /*  PENGATURAN POSISI TENGAH  */
+  justify-content: center;
+  /* Memusatkan secara horizontal */
+  align-items: center;
+  /* Memusatkan secara vertikal */
+
+  z-index: 999;
+}
+
+/* Class yang akan ditambahkan oleh JS untuk menampilkan modal */
+.modal.open {
+  display: flex;
+}
+
+/* Gaya untuk Box Konten Modal (Popup Hijau) */
+.modal-tahunan-box {
+  width: 380px;
+  /* Lebar Pop Up sesuai gambar */
+  max-width: 90%;
+
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+
+  /* Hapus margin yang menyebabkan pergeseran ke kanan */
+  margin: 0;
+
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-out;
+  /* Animasi fade in */
+}
+
+/* Header Pop Up (Hijau) */
+.modal-tahunan-header {
+  background: #7BC77E;
+  color: #000;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* Daftar File */
+.file-list {
+  padding: 20px;
+  max-height: 300px;
+  /* Batasi tinggi untuk scroll */
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 6px;
+  border-bottom: 1px solid #e5e5e5;
+  gap: 14px;
+}
+
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-item img {
+  width: 26px;
+}
+
+.file-item span {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Ikon Download */
+.file-download-btn {
+  cursor: pointer;
+  font-size: 22px;
+  color: #333;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.file-download-btn:hover {
+  opacity: 1;
+  color: #7BC77E;
+}
+
+/* Tombol Unduh Semua */
+.download-all-btn {
+  margin: 12px 20px 20px auto;
+  display: block;
+  padding: 8px 18px;
+  background: #7BC77E;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.download-all-btn:hover {
+  background: #65ad69;
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
