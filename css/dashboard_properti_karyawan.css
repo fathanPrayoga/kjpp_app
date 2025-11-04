@@ -53,6 +53,13 @@ body {
     flex-direction: column;
     gap: 15px;
 }
+.category-menu a.category-card {
+    text-decoration: none; 
+    color: inherit; 
+}
+.category-menu a.category-card .category-text h3 {
+    color: var(--text-dark); 
+}
 
 .category-card {
     background-color: var(--card-bg);
@@ -106,7 +113,7 @@ body {
 
 
 /* --- Kolom Kanan: Detail Dokumen --- */
-.penilaian-detail-panel {
+.detail-panel {
     flex-grow: 1;
     background-color: var(--card-bg);
     padding: 20px;
@@ -122,7 +129,7 @@ body {
     padding-bottom: 10px;
 }
 
-.penilaian-item {
+.detail-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +138,7 @@ body {
     cursor: pointer;
 }
 
-.penilaian-item:hover {
+.detail-item:hover {
     background-color: #fcfcfc;
 }
 
@@ -173,7 +180,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* === POPUP STYLING === */
+
 .popup-overlay {
   position: fixed;
   top: 0; left: 0;
