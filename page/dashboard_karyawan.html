@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karyawan Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard_karyawan.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="/css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Properti</a>
+            <a href="#">Laporan</a>
+            <a href="#">Obrolan</a>
+            <a href="#">Setting</a>
+        </nav>
+        <div class="user-profile">
+            <img src="/css/aditya.png" alt="Foto Profil" class="profile-pic">
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+
+        <h1 class="welcome-message">Selamat Datang, Adiya!</h1>
+
+        <div class="main-layout">
+            <div class="left-column">
+
+                <a href="dashboard_properti_karyawan.html" class="card-link">
+                    <section class="info-cards">
+                        <div class="card card-dashboard">
+                            <div class="card-icon property-icon big-icon"><i class="fas fa-search fa-2x"></i></div>
+                            <div class="card-content text-center">
+                                <h3>Properti</h3>
+                                <p class="subtitle-highlight">4 Project sedang dikelola</p>
+                            </div>
+                        </div>
+                </a>
+                <div class="card card-dashboard">
+                    <div class="card-icon report-icon big-icon"><i class="fas fa-hard-hat fa-2x"></i></div>
+                    <div class="card-content text-center">
+                        <h3>Laporan</h3>
+                        <p class="subtitle-highlight">0 Laporan harus diselesaikan</p>
+                    </div>
+                </div>
+                <div class="card card-dashboard">
+                    <div class="card-icon chat-icon big-icon"><i class="fas fa-comment-dots fa-2x"></i></div>
+                    <div class="card-content text-center">
+                        <h3>Obrolan</h3>
+                        <p class="subtitle-highlight">1 pesan masuk</p>
+                    </div>
+                </div>
+                </section>
+
+                <section class="status-section">
+                    <h2>Daftar Tugas</h2>
+                    <table id="task-table">
+                        <thead>
+                            <tr>
+                                <th style="width:5%;">No</th>
+                                <th style="width:70%;">Tugas</th>
+                                <th style="width:25%;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="task-list">
+                            <tr>
+                                <td colspan="3" class="empty-message">Anda belum memiliki tugas yang ditugaskan.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </div>
+
+            <aside class="right-column">
+                <section class="notifications-section">
+                    <h2>Notifikasi</h2>
+                    <div class="notification-item">
+                        <i class="fas fa-bell"></i>
+                        <p>I Pesan dari Asri</p>
+                    </div>
+                    <div class="notification-item">
+                        <i class="fas fa-bell"></i>
+                        <p>Project baru</p>
+                    </div>
+                </section>
+
+                <section class="notifications-section">
+                    <h2>Project Terbaru</h2>
+                    <div class="notification-item">Badrul Project Badrul <span class="time"
+                            style="float: right; color: #999;">18.47</span></div>
+                    <div class="notification-item">Asri Project Asri <span class="time"
+                            style="float: right; color: #999;">11.00</span></div>
+                    <div class="notification-item">Bedu2 Project Bedu2 <span class="time"
+                            style="float: right; color: #999;">19.47</span></div>
+                    <div class="notification-item">Fahmi Project Fahmi <span class="time"
+                            style="float: right; color: #999;">01.47</span></div>
+                </section>
+            </aside>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>

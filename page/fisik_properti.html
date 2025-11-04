@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisik Properti</title>
+    <link rel="stylesheet" href="/css/fisik_properti.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="/css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Properti</a>
+            <a href="#">Laporan</a>
+            <a href="#">Obrolan</a>
+            <a href="#">Setting</a>
+        </nav>
+        <div class="user-profile">
+            <img src="/css/aditya.png" alt="Foto Profil" class="profile-pic">
+        </div>
+    </header>
+    <main class="content-container">
+
+        <h1 class="page-title">Properti</h1>
+
+        <div class="page-layout">
+
+            <div class="category-menu">
+
+                <div class="category-card">
+                    <div class="category-icon green-bg"><i class="fas fa-file-alt"></i></div>
+                    <div class="category-text">
+                        <h3>Dokumen</h3>
+                        <p>Properti</p>
+                    </div>
+                </div>
+
+                <div class="category-card active-category">
+                    <div class="category-icon green-bg"><i class="fas fa-hard-hat"></i></div>
+                    <div class="category-text">
+                        <h3>Fisik</h3>
+                        <p>Properti</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon green-bg"><i class="fas fa-pencil-alt"></i></div>
+                    <div class="category-text">
+                        <h3>Penilaian</h3>
+                        <p>Properti</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-right">
+                <div class="table-card">
+                    <h3 class="table-title">Fisik</h3>
+                    <table class="data-table" id="fisik-table">
+                        <thead>
+                            <tr>
+                                <th class="checkbox-col"></th>
+                                <th>Nama</th>
+                                <th>Proyek</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dari JS -->
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <button class="btn-outline">Tolak</button>
+                        <button class="btn-primary">Verifikasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="popup-layout" id="popup" style="display: none;">
+        <div class="popup-container">
+            <div class="popup-header">
+                <h3>Project Asri</h3>
+                <button onclick="closePopup()" style="float: right; font-size: 20px;">✖</button>
+            </div>
+            <div class="popup-content" id="popup-element-list">
+
+            </div>
+            <div class="popup-footer">
+                <button class="btn-primary" onclick="openAddElementPopup()">➕</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-layout" id="add-element-popup" style="display: none;">
+        <div class="popup-container">
+            <div class="popup-header">
+                <h3>Tambah Elemen</h3>
+                <button onclick="closeAddElementPopup()">✖</button>
+            </div>
+            <div class="popup-content">
+                <label>Elemen: <input type="text" id="new-elemen"></label>
+                <label>Deskripsi: <input type="text" id="new-deskripsi"></label>
+                <label>Lampiran (opsional): <input type="file" id="new-lampiran" accept=".png,.jpeg,.pdf,.csv"></label>
+                <small>Files Type: PNG, JPEG, PDF, CSV</small>
+                <label>Latitude: <input type="text" id="new-latitude"></label>
+                <label>Longitude: <input type="text" id="new-longitude"></label>
+                <img src="/css/map-thumbnail.png" alt="Map" style="width: 100px; margin-top: 10px;">
+            </div>
+            <div class="popup-footer">
+                <button class="btn-primary" onclick="submitNewElement()">Tambah</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/scripts/fisik_properti.js"></script>
+</body>
+
+</html>

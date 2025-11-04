@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login dan Sign Up</title>
+    <link rel="stylesheet" href="../css/login.css"> 
+    <link rel="stylesheet" href="../css/sign_up.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-wrapper log-in-form">
+            <div class="left-section">
+                <img src="../css/kjpp_logo.png" alt="Logo KJPP" class="login-left-logo">
+            </div>
+
+            <div class="form-box login-box">
+                <form>
+                    <div class="input-group login-input">
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group login-input">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    
+                    <hr class="divider">
+                    <p class="or-text">OR</p>
+                    
+                    <div class="social-login login-social">
+                        <i class="fab fa-google google-icon"></i>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label>
+                            <input type="radio" name="remember" checked> Remember Me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password</a>
+                    </div>
+                    
+                    <button type="submit" class="btn log-in-btn">Log In</button>
+                    
+                    <p class="link-text">Don't have account? <a href="#" class="sign-up-link">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+        
+        <div class="form-wrapper sign-up-form hidden">
+            <div class="header-text">
+                <h1>Sign Up</h1>
+                <p>Lets join with us!</p>
+            </div>
+            <div class="illustration">
+                </div>
+
+            <div class="form-box sign-up-box">
+                <form>
+                    <div class="input-group">
+                        <i class="fas fa-envelope icon"></i>
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" placeholder="Enter your username">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" placeholder="Enter your password">
+                        <i class="fas fa-eye-slash toggle-password"></i>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" placeholder="Confirm your password">
+                        <i class="fas fa-eye-slash toggle-password"></i>
+                    </div>
+                    
+                    <button type="submit" class="btn sign-up-btn">Sign Up</button>
+                    
+                    <p class="social-text">Or log in using</p>
+                    <div class="social-login">
+                        <i class="fab fa-google google-icon"></i>
+                    </div>
+                    
+                    <p class="link-text">Already have an account? <a href="#" class="log-in-link">Log in</a></p>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="../scripts/users.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.querySelector('.log-in-form');
+            const signUpForm = document.querySelector('.sign-up-form');
+            const loginLinks = document.querySelectorAll('.log-in-link');
+            const signUpLinks = document.querySelectorAll('.sign-up-link');
+
+            function showLoginForm(e) {
+                e.preventDefault();
+                signUpForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+            }
+
+            function showSignUpForm(e) {
+                e.preventDefault();
+                loginForm.classList.add('hidden');
+                signUpForm.classList.remove('hidden');
+            }
+
+            loginLinks.forEach(link => link.addEventListener('click', showLoginForm));
+            signUpLinks.forEach(link => link.addEventListener('click', showSignUpForm));
+        });
+    </script>
+</body>
+</html>

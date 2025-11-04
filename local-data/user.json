@@ -1,0 +1,17 @@
+[
+  {
+    "username": "yui_aragaki",
+    "email": "yui.aragaki@kjpp.com",
+    "password": "password123"
+  },
+  {
+    "username": "aditya_kjpp",
+    "email": "aditya@kjpp.com",
+    "password": "admin123"
+  },
+  {
+    "username": "user_baru",
+    "email": "user.baru@mail.com",
+    "password": "securepass"
+  }
+]

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumen Properti Karyawan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/dokumen_properti_karyawan.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="/css/kjpp_logo.png" alt="Logo Perusahaan" class="navbar-logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Properti</a>
+            <a href="#">Laporan</a>
+            <a href="#">Obrolan</a>
+            <a href="#">Setting</a>
+        </nav>
+        <div class="user-profile">
+            <img src="/css/aditya.png" alt="Foto Profil" class="profile-pic">
+        </div>
+    </header>
+
+    <main class="content-container">
+        <h1 class="page-title">Properti</h1>
+
+        <div class="page-layout">
+
+            <div class="category-menu">
+                <div class="category-card active-category" data-url="dokumen.html">
+                    <div class="category-icon green-bg"><i class="fas fa-file-alt"></i></div>
+                    <div class="category-text">
+                        <h3>Dokumen</h3>
+                        <p>Properti</p>
+                    </div>
+                </div>
+
+                <div class="category-card" data-url="fisik.html">
+                    <div class="category-icon green-bg"><i class="fas fa-hard-hat"></i></div>
+                    <div class="category-text">
+                        <h3>Fisik</h3>
+                        <p>Properti</p>
+                    </div>
+                </div>
+
+                <div class="category-card" data-url="penilaian.html">
+                    <div class="category-icon green-bg"><i class="fas fa-pencil-alt"></i></div>
+                    <div class="category-text">
+                        <h3>Penilaian</h3>
+                        <p>Properti</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="detail-panel">
+                <h2 class="detail-title">Dokumen</h2>
+
+                <div class="add-button-container" style="display: none;"> 
+                    <button class="add-button" id="openAddModalBtn"><i class="fas fa-plus"></i> Tambah Proyek</button>
+                </div>
+                
+                <div class="document-list" id="documentList">
+                    <div class="detail-item project-row" data-project-id="asri">
+                        <div class="item-info">
+                            <input type="checkbox" id="check-asri" name="project-doc" checked>
+                            <label for="check-asri" class="item-name">Asri</label>
+                            <span class="item-project">Project Asri</span>
+                        </div>
+                        <div class="item-time">11.00</div>
+                    </div>
+                    <div class="detail-item project-row" data-project-id="badrul">
+                        <div class="item-info">
+                            <input type="checkbox" id="check-badrul" name="project-doc">
+                            <label for="check-badrul" class="item-name">Badrul</label>
+                            <span class="item-project">Project Badrul</span>
+                        </div>
+                        <div class="item-time">18.47</div>
+                    </div>
+                    <div class="detail-item project-row" data-project-id="bedu2">
+                        <div class="item-info">
+                            <input type="checkbox" id="check-bedu2" name="project-doc">
+                            <label for="check-bedu2" class="item-name">Bedu2</label>
+                            <span class="item-project">Project Bedu2</span>
+                        </div>
+                        <div class="item-time">19.47</div>
+                    </div>
+                    <div class="detail-item project-row" data-project-id="fahmi">
+                        <div class="item-info">
+                            <input type="checkbox" id="check-fahmi" name="project-doc">
+                            <label for="check-fahmi" class="item-name">Fahmi</label>
+                            <span class="item-project">Project Fahmi</span>
+                        </div>
+                        <div class="item-time">01.47</div>
+                    </div>
+
+                </div>
+
+                <div class="action-buttons-footer">
+                    <button class="btn-tolak">Tolak</button>
+                    <button class="btn-verifikasi">Verifikasi</button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    
+    <div id="projectModal" class="popup-overlay" style="display: none;">
+        <div class="popup-container">
+            <div class="popup-header">
+                <h3 id="modalTitle">Tambah Proyek Baru</h3>
+            </div>
+            <form id="projectForm" class="popup-form">
+                <input type="hidden" id="projectId">
+                <div class="popup-section">
+                    <label for="projectName">Nama Proyek</label>
+                    <input type="text" id="projectName" required>
+                </div>
+                <div class="popup-section">
+                    <label for="projectClient">Klien</label>
+                    <input type="text" id="projectClient" required>
+                </div>
+                <div class="popup-section">
+                    <label for="projectStatus">Status</label>
+                    <select id="projectStatus">
+                        <option value="pending">Menunggu Verifikasi</option>
+                        <option value="in-progress">Sedang Dikerjakan</option>
+                        <option value="verified">Selesai</option>
+                    </select>
+                </div>
+                <div class="popup-footer">
+                    <button type="button" class="btn-back" id="closeModalBtn">Batal</button>
+                    <button type="submit" class="btn-save"><i class="fas fa-save"></i> Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="pdfListModal" class="popup-overlay" style="display: none;">
+        <div class="popup-container pdf-list-container">
+            <div class="popup-header green-bg">
+                <h3 id="pdfModalTitle">Project Asri</h3>
+                <button class="close-btn" id="closePdfModalBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-content pdf-content" id="pdfListContent">
+                </div>
+            <div class="popup-footer">
+                <button class="btn-unduh-semua" id="downloadAllPdfBtn"><i class="fas fa-download"></i> Unduh semua</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/scripts/dokumen_properti.js"></script>
+
+</body>
+
+</html>

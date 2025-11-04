@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Asri",
+    "project": "Project Asri",
+    "status_penilaian": "Sudah Dinilai",
+    "nilai": {
+      "nilai_pasar_final": 2000000000,
+      "nilai_tanah": 500000000,
+      "nilai_indikasi_dari_pasar": 2100000000,
+      "nilai_indikasi_dari_biaya": 1950000000,
+      "nilai_likuidasi": 1800000000,
+      "nilai_bangunan": 1500000000,
+      "nilai_per_m2_tanah": 1666667,
+      "nilai_per_m2_bangunan": 3333333
+    }
+  },
+  {
+    "name": "Budi",
+    "project": "Project Budi",
+    "status_penilaian": "Belum Dinilai",
+    "nilai": {
+      "nilai_pasar_final": null,
+      "nilai_tanah": null,
+      "nilai_indikasi_dari_pasar": null,
+      "nilai_indikasi_dari_biaya": null,
+      "nilai_likuidasi": null,
+      "nilai_bangunan": null,
+      "nilai_per_m2_tanah": null,
+      "nilai_per_m2_bangunan": null
+    }
+  }
+]
