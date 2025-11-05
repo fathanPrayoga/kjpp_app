@@ -1,13 +1,11 @@
-let chatData; // Variabel global untuk menampung data JSON
+let chatData;
 const userListDiv = document.getElementById('userList');
 const chatMessagesDiv = document.getElementById('chatMessages');
 const chatHeader = document.querySelector('.chat-header');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const messageInput = document.getElementById('messageInput');
 const sendMessageBtn = document.getElementById('sendMessageBtn');
-// ... variabel lain di atas ...
 const searchInput = document.querySelector('.search-box input[type="text"]'); 
-// ...
 
 // --- 1. READ (Membaca dan Menampilkan Data) ---
 
@@ -24,7 +22,7 @@ async function loadChatData() {
 }
 
 // b) Fungsi untuk merender daftar pengguna di panel kiri
-function renderUserList(filter = 'all', searchQuery = '') { // <--- TAMBAHKAN PARAMETER searchQuesry
+function renderUserList(filter = 'all', searchQuery = '') {
     userListDiv.innerHTML = '';
     
     // 1. Definisikan query dari parameter
@@ -173,7 +171,7 @@ function attachMessageActionListeners() {
                 }
             });
 
-            // Logika Update (Edit)
+            // Logika Update (untuk fitur Edit)
             messageDiv.querySelector('.edit-btn').addEventListener('click', () => {
                 const currentText = messageDiv.textContent.trim();
                 const newText = prompt('Edit pesan:', currentText);
@@ -214,7 +212,7 @@ function deleteMessage(messageId) {
     // Filter array messages untuk menghapus pesan
     activeUser.messages = activeUser.messages.filter(m => m.id !== messageId);
     
-    // Update lastMessage jika pesan yang dihapus adalah pesan terakhir
+    // Update lastMessage kalau pesan yang dihapus adalah pesan terakhir
     if (activeUser.messages.length > 0) {
         const lastMsg = activeUser.messages[activeUser.messages.length - 1];
         activeUser.lastMessageText = lastMsg.text;
@@ -271,7 +269,7 @@ function attachUserRowListeners() {
     });
 }
 
-// Listener untuk Tombol Kirim dan Enter
+// Listener untuk BUtton Kirim dan Enter
 function attachSendListeners() {
     sendMessageBtn.addEventListener('click', sendMessage);
     messageInput.addEventListener('keypress', (e) => {
@@ -286,21 +284,21 @@ function attachSearchListener() {
     searchInput.addEventListener('input', () => {
         const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
         
-        // Panggil renderUserList dengan filter aktif dan nilai input pencarian
+        // Meamanggil renderUserList dengan filter aktif dan nilai input pencarian
         renderUserList(activeFilter, searchInput.value);
     });
 }
 
-// Fungsi inisialisasi utama
+// Inisialisasi utama
 function initializeChat() {
     // Render tampilan awal
     renderUserList(document.querySelector('.filter-btn.active').dataset.filter);
     renderChatMessages(chatData.activeChatId);
     
-    // Lampirkan semua event listener
+    // Event listener
     attachFilterListeners();
     attachSendListeners();
-    attachSearchListener(); // <--- BARIS BARU DITAMBAHKAN
+    attachSearchListener();
 }
 
 
