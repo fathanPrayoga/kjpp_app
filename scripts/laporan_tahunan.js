@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tahunanFileList = document.getElementById('tahunanFileList');
     const downloadAllBtn = document.getElementById('downloadAllBtn');
 
-    // Data Laporan Dummy (sesuai tampilan UI Anda)
-    // Di lingkungan nyata, data ini akan diambil dari API.
+    // Data Laporan Dummy
     const annualReportsData = {
         '2020': [
             { name: 'Laporan_GUS.pdf', url: '/files/2020/laporan_gus.pdf' },
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const fileUrl = e.currentTarget.dataset.url;
             console.log(`Mengunduh file: ${file.name}`);
             alert(`Simulasi Unduh: ${file.name}`);
-            // Untuk unduhan sebenarnya: window.open(fileUrl, '_blank');
         });
 
         return item;
