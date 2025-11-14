@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "adiya",
+      "name": "Adiya Rizki Karami",
+      "profilePic": "../users-chat-profiles/aditya-profile.png",
+      "lastMessageText": "Assalammualaikum",
+      "lastMessageTime": "16:03",
+      "isRead": true,
+      "isImportant": false,
+      "messages": [
+        {"id": 1, "sender": "self", "text": "Assalammualaikum", "time": "16:00"},
+        {"id": 2, "sender": "adiya", "text": "Wa'alaikumsalam. Ada perlu apa?", "time": "16:03"}
+      ]
+    },
+    {
+      "id": "hery",
+      "name": "Ir. Hery Wahyu Pramudya",
+      "profilePic": "../users-chat-profiles/hery-profile.png",
+      "lastMessageText": "Kita mulai proyek minggu depan.",
+      "lastMessageTime": "15:45",
+      "isRead": false,
+      "isImportant": true,
+      "messages": [
+        {"id": 1, "sender": "nery", "text": "Kita mulai proyek minggu depan.", "time": "15:45"}
+      ]
+    },
+    {
+      "id": "anton",
+      "name": "Anton Abdur Rahman",
+      "profilePic": "../users-chat-profiles/anton-profile.png",
+      "lastMessageText": "Apa kabar?",
+      "lastMessageTime": "15:30",
+      "isRead": true,
+      "isImportant": false,
+      "messages": [
+        {"id": 1, "sender": "self", "text": "Bagaimana progres laporan?", "time": "15:20"},
+        {"id": 2, "sender": "anton", "text": "Apa kabar?", "time": "15:30"}
+      ]
+    }
+  ],
+  "currentUser": "self",
+  "activeChatId": "adiya"
+}
